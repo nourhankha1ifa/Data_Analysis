@@ -1,0 +1,52 @@
+Your SQL Practice Tasks (50 Questions)
+
+-- 1. List all customers whose names start with 'K'.
+-- 2. Show all products that cost more than 1000 LE.
+-- 3. Display all products that belong to the 'Electronics' category.
+-- 4. Show products with 'desk' in the name (case insensitive).
+-- 5. List total number of employees per branch.
+-- 6. Show each product and how many are available across all branches.
+-- 7. Show total number of customers.
+-- 8. List customers who made purchases in April.
+-- 9. Show the total revenue per branch.
+-- 10. Find the most sold product (by quantity).
+-- 11. Show employees with more than 1 sale.
+-- 12. List branches with less than 5 units of any product.
+-- 13. Show average sale amount per employee.
+-- 14. List total revenue per product.
+-- 15. Display total quantity sold per category.
+-- 16. Rank products by revenue using RANK().
+-- 17. Use DENSE_RANK() to rank customers by number of purchases.
+-- 18. Use ROW_NUMBER() to list each customer's purchases chronologically.
+-- 19. Find products that were never sold.
+-- 20. Show customers who didn’t make any purchase.
+-- 21. Count how many distinct categories are sold.
+-- 22. Get the names of employees who work in Giza.
+-- 23. Show all sales made by 'Ali Hassan'.
+-- 24. What is the most common product sold?
+-- 25. List each product and how many different customers bought it.
+-- 26. Get the latest sale made in each branch.
+-- 27. Find total inventory value per branch.
+-- 28. Show products with quantity = 0 (assume updated data).
+-- 29. Calculate the average price of electronics.
+-- 30. Show revenue per month.
+-- 31. List all transactions for customer 'Laila Samir'.
+-- 32. Show products with total sold quantity > 2.
+-- 33. Find sales with more than one item.
+-- 34. Create a VIEW for inventory summary (branch, product, quantity).
+-- 35. Create a VIEW for sales report (customer name, date, total).
+-- 36. Show revenue grouped by employee and branch.
+-- 37. List categories ordered by total items sold descending.
+-- 38. Show sales including product names and quantities.
+-- 39. Show the number of different products sold in April.
+-- 40. Calculate the average sale value.
+-- 41. List employees who sold both electronics and furniture.
+-- 42. Show total number of sales per day in April.
+-- 43. Create a view to show branch, top product by revenue.
+-- 44. Create a view for employee performance (total sales).
+-- 45. List customers who bought accessories.
+-- 46. Show customers and their total spending.
+-- 47. List top 3 branches by revenue.
+-- 48. Display all employees and their branch names.
+-- 49. List branches that sold more than 5 products.
+-- 50. List products sold by each employee.
