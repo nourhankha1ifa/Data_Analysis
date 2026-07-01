@@ -1,5 +1,9 @@
 # Kickstarter Projects Analysis Dashboard
 
+![Dashboard Preview](https://github.com/nourhankha1ifa/Data_Analysis/blob/main/EraaSoft/Power%20BI/Power%20BI%201/Kickstarter%20Snapshot.png).
+
+<br>
+
 This is my first Power BI project. I built it to learn and practice the basics of Power BI: bringing in data, cleaning it, building a data model, writing simple DAX measures, and creating a dashboard. It is a learning project, not a finished, production-ready dashboard.
 
 ---
