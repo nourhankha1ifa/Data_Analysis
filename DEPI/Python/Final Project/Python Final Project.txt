@@ -1,0 +1,25 @@
+Python Final Project
+
+data preprocessing
+- Delete orders with NaN values  based on OrderID
+- Rename City.1, Country.1, Phon.1 Columns, to be CompanyCity, CompanyCountry, CompanyPhon
+- Change OrderDate Type into Date
+- Change ID Columns, and OrderNumber column to integer
+- Drop dupliacted rows based on OrderID, and OrderNumber
+- Strip and lowercase columns names
+- select only these columns: 'customerid', 'firstname', 'lastname', 'city', 'country', 'orderid', 'ordernumber', 'orderdate', 'totalamount'
+
+## Univariate Analysis : make analysis for each column
+- Describe TotalAmount Column and using Histogram chart to show the data distribution for this column, also show a vertical line for mean and median value
+- Describe City By using Bar Chart
+- Describe country By using Bar Chart or Pie Chart
+
+## Bivariate Analysis : make analysis for each two column
+- Total Amount per Country using Bar Chart
+- Total Amount per City using Bar Chart
+- Total Amount per Orderdate using line chart
+- Total Amount per Customer full name using bar chart (top ten customers)
+
+## Multivariate Analysis : make analysis for multi columns
+- Number of countries and totalamount per month orderdate (prefer to put orderdate in index) using bar chart
+- total amount of each country per month using scatter chart
