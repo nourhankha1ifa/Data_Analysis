@@ -1,0 +1,135 @@
+-- =========
+-- ?? Create Database
+-- =========
+CREATE DATABASE RetailSalesDB;
+GO
+
+USE RetailSalesDB;
+GO
+
+-- =========
+-- ?? Create Tables
+-- =========
+CREATE TABLE Branch (
+    BranchID INT PRIMARY KEY,
+    BranchName VARCHAR(100),
+    Location VARCHAR(100)
+);
+
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Position VARCHAR(50),
+    BranchID INT,
+    FOREIGN KEY (BranchID) REFERENCES Branch(BranchID)
+);
+
+CREATE TABLE Customer (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Email VARCHAR(100),
+    Phone VARCHAR(15)
+);
+
+CREATE TABLE Product (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Category VARCHAR(50),
+    Price DECIMAL(10,2)
+);
+
+CREATE TABLE Inventory (
+    BranchID INT,
+    ProductID INT,
+    Quantity INT,
+    PRIMARY KEY (BranchID, ProductID),
+    FOREIGN KEY (BranchID) REFERENCES Branch(BranchID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+CREATE TABLE Sale (
+    SaleID INT PRIMARY KEY,
+    CustomerID INT,
+    EmployeeID INT,
+    BranchID INT,
+    SaleDate DATE,
+    TotalAmount DECIMAL(10,2),
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
+    FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID),
+    FOREIGN KEY (BranchID) REFERENCES Branch(BranchID)
+);
+
+CREATE TABLE SaleDetails (
+    SaleID INT,
+    ProductID INT,
+    Quantity INT,
+    Subtotal DECIMAL(10,2),
+    PRIMARY KEY (SaleID, ProductID),
+    FOREIGN KEY (SaleID) REFERENCES Sale(SaleID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+-- =========
+-- ?? Insert Sample Data (Expanded)
+-- =========
+-- Branches
+INSERT INTO Branch VALUES
+(1, 'Main Branch', 'Cairo'),
+(2, 'Mall Branch', 'Giza'),
+(3, 'City Center', 'Alexandria');
+
+-- Employees
+INSERT INTO Employee VALUES
+(101, 'Ali Hassan', 'Cashier', 1),
+(102, 'Sarah Nabil', 'Manager', 1),
+(103, 'Mostafa Gamal', 'Sales Rep', 2),
+(104, 'Nour El Din', 'Cashier', 2),
+(105, 'Hanan Said', 'Sales Rep', 3),
+(106, 'Omar Fathy', 'Sales Rep', 1);
+
+-- Customers
+INSERT INTO Customer VALUES
+(201, 'Mohamed Adel', 'mo.adel@mail.com', '0101010101'),
+(202, 'Laila Samir', 'laila.s@mail.com', '0102020202'),
+(203, 'Karim Hany', 'karim.h@mail.com', '0103030303'),
+(204, 'Dina Mostafa', 'dina.m@mail.com', '0104040404'),
+(205, 'Khaled Youssef', 'khaled.y@mail.com', '0105050505'),
+(206, 'Yara Magdy', 'yara.m@mail.com', '0106060606');
+
+-- Products
+INSERT INTO Product VALUES
+(301, 'Laptop HP', 'Electronics', 15000.00),
+(302, 'iPhone 13', 'Electronics', 22000.00),
+(303, 'Desk Chair', 'Furniture', 1800.00),
+(304, 'Smart Watch', 'Electronics', 3500.00),
+(305, 'Backpack', 'Accessories', 450.00),
+(306, 'Office Desk', 'Furniture', 3500.00),
+(307, 'Bluetooth Headset', 'Electronics', 750.00);
+
+-- Inventory
+INSERT INTO Inventory VALUES
+(1, 301, 10), (1, 302, 5), (1, 303, 7), (1, 305, 6),
+(2, 301, 2), (2, 304, 10), (2, 305, 15), (2, 306, 3),
+(3, 302, 3), (3, 303, 4), (3, 305, 8), (3, 307, 9);
+
+-- Sales
+INSERT INTO Sale VALUES
+(401, 201, 101, 1, '2024-04-01', 18000.00),
+(402, 202, 103, 2, '2024-04-03', 450.00),
+(403, 203, 104, 2, '2024-04-05', 3500.00),
+(404, 204, 105, 3, '2024-04-06', 4000.00),
+(405, 205, 106, 1, '2024-04-07', 750.00),
+(406, 206, 103, 2, '2024-04-08', 22500.00);
+
+-- Sale Details
+INSERT INTO SaleDetails VALUES
+(401, 301, 1, 15000.00),
+(401, 303, 1, 1800.00),
+(401, 305, 2, 1200.00),
+(402, 305, 1, 450.00),
+(403, 304, 1, 3500.00),
+(404, 303, 2, 3600.00),
+(404, 305, 1, 400.00),
+(405, 307, 1, 750.00),
+(406, 302, 1, 22000.00),
+(406, 305, 1, 500.00);
