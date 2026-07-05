@@ -1,4 +1,4 @@
-# Excel Learning – Tasks 1–5
+# My Excel Learning Journey
 
 This covers 5 Excel workbooks, going from basic formulas up to two full interactive dashboards built on a Power Pivot data model. Excel_1–3 are learning the fundamentals one skill at a time; Excel_4 and Excel_5 are complete, self-contained dashboard projects that pull everything together.
 
