@@ -1,4 +1,4 @@
-# Python Learning Journey
+# My Python Learning Journey
 
 This is my Python learning project. It's made up of 4 tasks that I worked through one after another, starting from the basics and building up to working with a real dataset using pandas. This is not a finished application — it's a record of what I practiced and learned.
 
