@@ -1,4 +1,4 @@
-# My Excel Learning Journey — Business Dashboards
+# Excel Learning Journey
 
 This is a summary of what I learned across three Excel dashboard projects: Excel Sales Performance, Customer Feedback Analysis, and Sales Distribution. Each one practiced a different mix of PivotTables, formulas, and chart choices.
 
